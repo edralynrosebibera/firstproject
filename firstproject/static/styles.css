@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('images/bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 90vw;
+    max-width: 62.5em;
+    position: relative;
+    margin: auto;
+}
+
+.add-flashcard-con {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.2em 1em;
+}
+
+button{
+    border: solid;
+    outline: none;
+    border-color: #DE3163;
+    cursor: pointer;
+}
+
+.add-flashcard-con button{
+    font-size: 18px;
+    background-color: #FDA4BA;
+    color:white;
+    padding: 15px 20px;
+    width: 100%;
+    font-weight: 600;
+    font-family:'Poppins';
+    border-radius: 5px;
+}
+
+#card-con{
+    margin-top: 1em;
+}
+
+.question-container{
+    width: 90vw;
+    max-width: 34em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFD1DC;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    padding: 3em 2em;
+    border-radius: 5px;
+    box-shadow: 0 1em 2em rgb(228, 136, 136);
+    border-style: solid;
+    border-color: #E75480;
+}
+
+.question-container h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.error-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+#error {
+    color: red;
+    font-weight: 400;
+    font-family: 'Poppins';
+}
+
+.fa-xmark {
+    font-size: 1.4em;
+    background-color: red;
+    height: 1.8em;
+    width:1.8em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: grid;
+    place-items: center;
+    color:#fff;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+
+label {
+    color: black;
+    font-weight:600;
+    font-family: 'Poppins';
+    margin-bottom: 0.3em;
+}
+textarea {
+    width: 100%;
+    padding: 0.7em 0.5em;
+    border: 2px solid #E75480;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+    resize: none;
+    font-size: large;
+}
+
+textarea:not(:last-child) {
+    margin-bottom: 1.2em;
+}
+textarea:focus {
+    border-color: #E75480;
+}
+
+#save-btn {
+    font-size: 18px;
+    background-color: #fc94af;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+.card-list-container {
+    display: grid;
+    padding: 0.2em;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color: #F8C8DC;
+    box-shadow: 0 1em 2em rgb(228, 136, 136);
+    border-radius: 5px;
+    padding: 15px 20px;
+    border-style: solid;
+    border-color: #E75480;
+}
+
+.question-div,
+.answer-div {
+    text-align: justify;
+    font-family: 'Poppins';
+}
+
+.question-div {
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color:#2a2a2a;
+    font-size: large;
+    font-family: 'Poppins';
+}
+
+.answer-div {
+    margin-top: 1em;
+    font-weight: 400;
+    color: #2a2a2a;
+    font-size: large;
+    font-family: 'Poppins';
+}
+
+.show-hide-btn {
+    display: block;
+    background-color: #fc94af;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6em 0;
+    border-radius: 0.3em;
+    border-style: solid;
+    border-color: #E75480;
+}
+
+.button-con {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Poppins';
+}
+
+.edit,
+.delete{
+    background-color: transparent;
+    padding: 0.5em;
+    margin-top: 4%;
+    font-size: 16px;
+}
+
+.edit {
+    color:#2a2a2a
+}
+
+.delete {
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .card-list-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body{
+        font-size: 14px;
+    }
+    .card-list-container{
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+    }
+}

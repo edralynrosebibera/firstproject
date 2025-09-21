@@ -19,6 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('flashcards.urls')),   # replace with your app name
+    path('', include('flashcards.urls')),  
 ]
+
 

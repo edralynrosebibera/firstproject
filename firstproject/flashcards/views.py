@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def home(request):
-    return HttpResponse("Hello, this is my app!")
+def flashcards_view(request):
+    return render(request, "flashcards.html")
+
